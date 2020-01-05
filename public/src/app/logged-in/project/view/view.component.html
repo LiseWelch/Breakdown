@@ -1,0 +1,20 @@
+<div class="row">
+  <div *ngIf="!editOn" class="container">
+    <h1>{{ curProject.projectName }}</h1>
+    <h3>Last Updated: {{ curProject.updatedAt | date }}</h3>
+    <p>Project Users: </p>
+    <ul *ngIf="userNames.length == 0">
+      <li *ngFor="let user of curProject.projectUsers"><span style="color: white; margin-right: 0.25rem;">+</span> {{ user.userName }}</li>
+    </ul>
+    <ul *ngIf="userNames.length > 0">
+      <li *ngFor="let names of userNames"><span style="color: white; margin-right: 0.25rem;">+</span> {{ names }}</li>
+    </ul>
+    <div class="buttons">
+      <button (click)="editOn = !editOn" *ngIf="curProject.adminID == curUserID">Edit</button>
+      <button (click)="deleteProj()" *ngIf="curProject.adminID == curUserID">Delete</button>
+      <button (click)="listOn = !listOn">Add List</button>
+    </div>
+  </div>
+  <app-edit *ngIf="editOn" (editEmitter)="toggleEdit($event)" [curProject]="curProject" [curUserID]="curUserID"></app-edit>
+  <app-list *ngIf="listOn"></app-list>
+</div>

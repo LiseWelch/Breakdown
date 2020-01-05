@@ -1,0 +1,99 @@
+
+header {
+  background-color: black;
+  border-bottom: 2px solid rgb(229, 228, 55);
+  color: white;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 10px 0px 10px grey;
+}
+
+nav h1 {
+  font-weight: 600;
+  margin: .5rem 3rem .5rem .2rem;
+  font-size: 1.75rem;
+  display: flex;
+  flex: 1 1 auto;
+  align-self: center;
+}
+
+nav{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex: 0 1 auto;
+}
+
+nav img {
+  width: 2.25rem;
+  height: 2rem;
+  display: flex;
+  flex: 1 1 auto;
+  align-self: center;
+  margin-left: 1.5rem;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  flex: 1 0 auto;
+  padding: 10px 10px 0px 10px;
+  align-items: flex-end;
+  flex: 0 1 auto;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+nav .li {
+  color: black;
+  background-color: rgb(78, 197,193);
+  list-style: none;
+  border-radius: 10px 10px 0px 0px;
+  font-size: 1.25rem;
+  padding: 5px 20px;
+  cursor: pointer;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+nav .li:hover {
+  background-color: #ff6f61;
+  color: black;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+.logout {
+  color: white;
+  align-self: center;
+  margin: 0 1.5rem;
+  cursor: pointer;
+}
+
+
+nav .li:focus,
+nav .li:active {
+  background-color: rgb(229, 228, 55);
+  border-radius: 10px 10px 0px 0px;
+  color: black;
+}
+
+.active {
+  background-color: rgb(78, 197,193) !important;
+  border-radius: 10px 10px 0px 0px;
+  color: black !important;
+}
+
+

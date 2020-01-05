@@ -1,0 +1,41 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-image: url('../bg4.png');
+  background-size: 25rem;
+  background-repeat: repeat;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  /* let's flex */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}

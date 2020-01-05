@@ -1,0 +1,15 @@
+<form (submit)="onSubmit()">
+  <div class="form-group">
+    <label>Users:</label>
+    <div class="group">
+      <select class="input-container" name="newUser" [(ngModel)]="idString">
+        <option *ngFor="let user of allUsers" [value]="user._id">{{ user.userName }}</option>
+      </select>
+      <button type="submit">Add</button>
+    </div>
+  </div>
+</form>
+  <p *ngIf="userNames.length > 0" >Project Users: </p>
+  <ul>
+    <li *ngFor="let name of userNames"><span style="color: white; margin-right: 0.25rem;">+</span> {{ name }}</li>
+  </ul>

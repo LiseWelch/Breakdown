@@ -1,0 +1,13 @@
+<header>
+  <nav>
+    <img src="../assets/logo.png">
+    <h1>Breakdown</h1>
+    </nav>
+</header>
+<main>
+  <app-register (UserEmitter)="userFromChild($event)" ></app-register>
+  <div class="col">
+    <app-app-info></app-app-info>
+    <app-login></app-login>
+  </div>
+</main>

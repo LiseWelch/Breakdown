@@ -1,0 +1,18 @@
+<link rel="stylesheet/less" type="text/css" href="logged-in.component.scss" />
+<script src="less.js" type="text/javascript"></script>
+<body (click) = "ngOnInit()">
+<header>
+  <nav>
+    <img src="../../assets/logo.png" alt="HI">
+    <h1>Breakdown</h1>
+        <a class="li" [routerLink] = "['dash']">Home</a>
+        <a class="li" *ngFor="let proj of userProjects" [routerLink] = "['projects/view', proj._id]">{{ proj.projectName }}</a>
+        <a class="li" [routerLink] = "['projects/new']">+</a>
+        <a class="li" [routerLink] = "['info']">Info</a>
+  </nav>
+  <a (click)="logout()" class="logout">Logout</a>
+</header>
+<main>
+  <router-outlet></router-outlet>
+</main>
+</body>

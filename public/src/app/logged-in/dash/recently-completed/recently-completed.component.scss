@@ -1,0 +1,15 @@
+.col-2 {
+  display: flex;
+  flex-direction: row;
+  flex: 0 1 auto;
+  margin: 3rem;
+}
+
+.recent {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  background-color: rgb(229, 228, 55);
+  border-radius: 15px;
+  padding: 3rem;
+}
